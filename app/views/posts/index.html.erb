@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<% if user_signed_in? %>
+  <% case current_user.role %>
+  <% when 'user' %>
+    <h3>Welcome</h3>
+  <% when 'marketing' %>
+    <h3>Welcome, Marketing</h3>
+  <% when 'unit' %>
+    <h3>Welcome, Unit</h3>
+  <% when 'admin' %>
+    <h3>Welcome, Administrator</h3>
+  <% end %>
+<% else %>
+  <h3>Welcome</h3>
+<% end %>
+
+
+<h1>Listing Posts</h1>
+
+<%= render 'list' %>
