@@ -1,0 +1,19 @@
+<h1>Citra Alam's Unit</h1>
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+  <tr>
+    <th>Name</th>
+		<th>Description</th>
+    <th colspan="3"></th>
+  </tr>
+
+  <% @units.each do |unit| %>
+    <tr>
+      <td><%= unit.title %></td>
+			<td><%= unit.description %></td>
+      <td><%= link_to 'Show', unit_path(unit) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'New Event', new_event_path %>

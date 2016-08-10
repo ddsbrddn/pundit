@@ -1,4 +1,4 @@
-class PostPolicy < ApplicationPolicy
+class EventPolicy < ApplicationPolicy
 	class Scope < Scope
 		def resolve
 			scope.where(user: user)

@@ -1,0 +1,22 @@
+<p>
+	<strong>Name:</strong>
+	<%= @event.name %>
+</p>
+
+<p>
+	<strong>Price:</strong>
+	<%= @event.price %>
+</p>
+
+<p>
+	<strong>Description:</strong>
+	<%= @event.description %>
+</p>
+
+<p>
+  <strong>Check who created:</strong>
+  <%= @event.user.email %>
+</p>
+
+<button><%= link_to 'New Event', new_event_path %></button>
+<button><%= link_to 'All Event', events_path %></button>

@@ -15,6 +15,7 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
+    authorize @post
     @post = Post.new
   end
 

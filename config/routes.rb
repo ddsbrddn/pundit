@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   devise_for :users
 
   root 'posts#index'
-  resources :users, only: [:update]
+  resources :users, only: [:update, :index]
+
+  resources :events
+  resources :units
 
 end
